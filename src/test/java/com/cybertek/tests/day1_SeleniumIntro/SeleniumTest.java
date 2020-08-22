@@ -14,6 +14,9 @@ public class SeleniumTest {
         //2- create the instance of chrome driver:
         WebDriver driver = new ChromeDriver();
 
+        //.manage().window().maximize(): this will maxmize the size of the window opened.
+        driver.manage().window().maximize();
+
         //3- test if driver is working:
         driver.get("https://google.com");
 
@@ -47,7 +50,11 @@ public class SeleniumTest {
         //.navigate (.to("https://examle.com")): this navigates to the given url exactly the same as .get method(waits for page to load completely while .to method doesn't)
         driver.navigate().to("https://www.facebook.com");
 
-        //.close:
+        //.getPageSource: gets the page source we are on
+        driver.getPageSource();
+
+        //.close: this will close the driver (Only closes last open window of browser).
+        //.quit: this will close all of the browsers in this session
 
 
     }
