@@ -54,6 +54,8 @@ public class SeleniumTest {
         driver.getPageSource();
 
         //.close: this will close the driver (Only closes last open window of browser).
+        driver.close();
+
         //.quit: this will close all of the browsers in this session
 
 
