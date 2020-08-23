@@ -20,7 +20,8 @@ public class Practice3_Navigations_TitleVerification {
         driver.get("https://google.com");
 
         // 3- Click to Gmail from top right.
-        // locater By.linkText("String"), This is used to find a text which is a hyperlink
+        // locater By.linkText("String"), This is used to find a text which is a hyperlink. It looks for exact String match.
+        // locater By.partialLinkText("String"), this is also usedd to find a hyper link, it looks for a partial match to the string given
         driver.findElement(By.linkText("Gmail")).click(); //find element returns web element and click is the method that clicks on it
 
         // 4- Verify title contains:
