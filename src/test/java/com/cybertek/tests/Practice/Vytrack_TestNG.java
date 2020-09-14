@@ -1,6 +1,7 @@
 package com.cybertek.tests.Practice;
 
 import com.cybertek.tests.Utilities.WebDriverFactory;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -9,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class Vytrack_TestNG {
@@ -73,9 +75,14 @@ public class Vytrack_TestNG {
     }
 
     @AfterMethod
-    public void driverTearDown() throws InterruptedException {
-        //Closing driver after every test:
+    public void driverTearDown() throws InterruptedException, IOException {
+        //Waiting for page to be fully loaded and take screenshot and save in desired location:
         Thread.sleep(3000);
+
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("/Users/mohammadafzal/Documents/Zain School"));
+
+        //Closing driver after every test:
         driver.close();
 
     }
