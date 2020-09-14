@@ -79,8 +79,14 @@ public class Vytrack_TestNG {
         //Waiting for page to be fully loaded and take screenshot and save in desired location:
         Thread.sleep(3000);
 
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("/Users/mohammadafzal/Documents/Zain School"));
+        //Driver object to take screenshot:
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
+
+        //Calling getScreenShotAs method to create new img file:
+        File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+
+        //copying file to new location:
+        FileUtils.copyFile(srcFile, new File("/Users/mohammadafzal/Desktop/Zain\\ School/ScreenShots\\ For\\ User\\ Story\\ 108 "));
 
         //Closing driver after every test:
         driver.close();
