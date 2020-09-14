@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TextNG_Practices {
+public class TestNG_Practices {
 
     WebDriver driver;
 
@@ -57,7 +57,7 @@ public class TextNG_Practices {
 
     @AfterMethod
     public void tearDownMethod() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.close();
     }
 
