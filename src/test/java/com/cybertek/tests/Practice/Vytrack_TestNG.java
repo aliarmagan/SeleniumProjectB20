@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class Vytrack_TestNG {
+public class Vytrack_TestNG extends WebDriverFactory {
 
     WebDriver driver;
 
@@ -21,7 +21,7 @@ public class Vytrack_TestNG {
     public void setDriver(){
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         //Go to QA environment VyTrack:
         driver.get("https://qa2.vytrack.com");
@@ -29,7 +29,7 @@ public class Vytrack_TestNG {
     }
 
     @Test
-    public void vyTrackLogin() throws InterruptedException {
+    public void a_VyTrackLogin() throws InterruptedException, IOException {
         //login to QA environment
         //Username:
         driver.findElement(By.name("_username")).sendKeys("user170");
@@ -41,7 +41,10 @@ public class Vytrack_TestNG {
         //driver.findElement(By.name("_submit")).click();
 
         //confirm login successful:
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+
+        //ScreenShot method in Utility/WebDriverFactory
+        getScreenShot(this.driver, "Driver Login");
 
         String expectedHomePageTitle = "Dashboard";
         String actualHomePageTitle = driver.getTitle();
@@ -50,19 +53,19 @@ public class Vytrack_TestNG {
     }
 
     @Test
-    public void vyTrackFleetVehicles() throws InterruptedException {
+    public void b_VyTrackFleetOdometer() throws InterruptedException, IOException {
         //Calling login method:
-        vyTrackLogin();
+        a_VyTrackLogin();
 
         //Drop-down menu by clicking on it
         driver.findElement(By.xpath("//span[@class='title title-level-1']")).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         //Find and click on vehicle odometer:
         driver.findElement(By.xpath("//span[.='Vehicle Odometer']")).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         //Verify driver has navigated to the vehicle odometer page overview:
         String expectedVehicleOdometerTitle = "Vehicle Odometer - Entities - System - Car - Entities - System";
@@ -70,24 +73,18 @@ public class Vytrack_TestNG {
 
         Thread.sleep(3000);
 
+        //ScreenShot method in Utility/WebDriverFactory
+        getScreenShot(driver, "Fleet Vehicles Odometer");
+
         Assert.assertEquals(actualVehicleOdometerTitle, expectedVehicleOdometerTitle, "Navigation to vehicle odometer Failed!");
+
 
     }
 
     @AfterMethod
-    public void driverTearDown() throws InterruptedException, IOException {
-        //Waiting for page to be fully loaded and take screenshot and save in desired location:
-        Thread.sleep(3000);
+    public void driverTearDown() throws InterruptedException {
 
-        //Driver object to take screenshot:
-        TakesScreenshot scrShot =((TakesScreenshot)driver);
-
-        //Calling getScreenShotAs method to create new img file:
-        File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
-
-        //copying file to new location:
-        FileUtils.copyFile(srcFile, new File("/Users/mohammadafzal/Desktop/Zain\\ School/ScreenShots\\ For\\ User\\ Story\\ 108 "));
-
+        Thread.sleep(1000);
         //Closing driver after every test:
         driver.close();
 
