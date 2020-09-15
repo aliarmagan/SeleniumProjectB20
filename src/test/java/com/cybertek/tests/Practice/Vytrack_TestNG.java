@@ -21,10 +21,6 @@ public class Vytrack_TestNG extends WebDriverFactory_VyTrack {
         //Go to QA environment VyTrack:
         driver.get("https://qa2.vytrack.com");
 
-        //Set driverlogin and password:
-        setDriverLogin("user170");
-        setDriverPassword("UserUser123");
-
     }
 
     @Test
