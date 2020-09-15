@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class Vytrack_TestNG extends WebDriverFactory_VyTrack {
+public class VyTrack_TestNG extends WebDriverFactory_VyTrack {
 
     @BeforeMethod
     public void setDriver(){
