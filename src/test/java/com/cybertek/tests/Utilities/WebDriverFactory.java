@@ -10,8 +10,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class WebDriverFactory {
+
+    public WebDriver driver;
 
     public static WebDriver getDriver(String browserType){
 

@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Vytrack_TestNG extends WebDriverFactory {
 
-    WebDriver driver;
-
     @BeforeMethod
     public void setDriver(){
         driver = WebDriverFactory.getDriver("chrome");
