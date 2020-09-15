@@ -1,6 +1,6 @@
 package com.cybertek.tests.day4_findElements_checkBoxes_Radio;
 
-import com.cybertek.tests.Utilities.WebDriverFactory;
+import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ public class P2_MerriamWebster_Links {
 
         //TC #2: FINDELEMENTS
         //1. Open Chrome browser
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory_VyTrack.getDriver("chrome");
         //2. Go to https://www.merriam-webster.com/
         driver.get("https://www.merriam-webster.com/");
         //3. Print out the texts of all links

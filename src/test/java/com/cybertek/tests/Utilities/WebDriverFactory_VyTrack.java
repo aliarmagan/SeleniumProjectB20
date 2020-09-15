@@ -12,9 +12,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class WebDriverFactory {
+public class WebDriverFactory_VyTrack {
 
     public WebDriver driver;
+    private String driverLogin;
+    private String driverPassword;
 
     public static WebDriver getDriver(String browserType){
 
@@ -31,6 +33,22 @@ public class WebDriverFactory {
             return null;
         }
 
+    }
+
+    public void setDriverLogin(String driverLogin){
+        this.driverLogin = driverLogin;
+    }
+
+    public String getDriverLogin(){
+        return driverLogin;
+    }
+
+    public void setDriverPassword(String driverPassword){
+        this.driverPassword = driverPassword;
+    }
+
+    public String getDriverPassword(){
+        return driverPassword;
     }
 
     public void getScreenShot(WebDriver driver, String screenShotName) throws IOException {

@@ -1,6 +1,6 @@
 package com.cybertek.tests.day3_cssSelector_xPath;
 
-import com.cybertek.tests.Utilities.WebDriverFactory;
+import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -14,7 +14,7 @@ public class WT_CybertekLinkVerification {
         //WebDriver driver = new ChromeDriver();
 
         //Using custom method in Utilities, Easier to make changes and it can be reusable many times:
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory_VyTrack.getDriver("chrome");
 
         // 2.Go to http://practice.cybertekschool.com/forgot_password
         driver.get("http://practice.cybertekschool.com/forgot_password");

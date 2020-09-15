@@ -1,6 +1,6 @@
 package com.cybertek.tests.day5_TestNG_intro_dropdowns;
 
-import com.cybertek.tests.Utilities.WebDriverFactory;
+import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ public class P05_SeleniumEasy_Task1 {
 
         //TC #2: SeleniumEasy Checkbox Verification – Section 1
         //1. Open Chrome browser
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory_VyTrack.getDriver("chrome");
         //2. Go to https://www.seleniumeasy.com/test/basic-checkbox-demo.html
         driver.get("https://www.seleniumeasy.com/test/basic-checkbox-demo.html");
         driver.manage().window().maximize();

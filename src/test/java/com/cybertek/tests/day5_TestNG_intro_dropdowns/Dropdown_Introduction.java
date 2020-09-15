@@ -1,6 +1,6 @@
 package com.cybertek.tests.day5_TestNG_intro_dropdowns;
 
-import com.cybertek.tests.Utilities.WebDriverFactory;
+import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -19,7 +19,7 @@ public class Dropdown_Introduction {
     public void setUpMethod(){
 
         //1. Open Chrome browser
-        driver = WebDriverFactory.getDriver("chrome");
+        driver = WebDriverFactory_VyTrack.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 

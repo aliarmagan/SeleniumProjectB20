@@ -1,6 +1,6 @@
 package com.cybertek.tests.day5_TestNG_intro_dropdowns;
 
-import com.cybertek.tests.Utilities.WebDriverFactory;
+import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public class TestNG_Practices {
 
     @BeforeMethod
     public void setUpMethod(){
-        driver = WebDriverFactory.getDriver("chrome");
+        driver = WebDriverFactory_VyTrack.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://www.google.com");

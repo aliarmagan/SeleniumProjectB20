@@ -1,6 +1,6 @@
 package com.cybertek.tests.day3_cssSelector_xPath;
 
-import com.cybertek.tests.Utilities.WebDriverFactory;
+import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ public class Practice_Amazon_cssSelector {
         // DO NOT USE ANY DEVELOPER TOOLS TO GET ANY LOCATORS.
         // TC #3: Amazon link number verification
         // 1. Open Chrome browser
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory_VyTrack.getDriver("chrome");
 
         // 2. Go to https://www.amazon.com
         driver.get("https://www.amazon.com");
