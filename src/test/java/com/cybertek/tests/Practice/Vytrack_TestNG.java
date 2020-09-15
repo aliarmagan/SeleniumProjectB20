@@ -44,6 +44,7 @@ public class Vytrack_TestNG extends WebDriverFactory {
         //ScreenShot method in Utility/WebDriverFactory
         getScreenShot(this.driver, "Driver Login");
 
+        //verify driver has landed on vytrack Dashboard:
         String expectedHomePageTitle = "Dashboard";
         String actualHomePageTitle = driver.getTitle();
         Assert.assertEquals(actualHomePageTitle, expectedHomePageTitle, "Login failed");
