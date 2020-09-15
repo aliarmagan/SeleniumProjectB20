@@ -15,8 +15,8 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverFactory_VyTrack {
 
     public WebDriver driver;
-    private String driverLogin;
-    private String driverPassword;
+    final private String driverLogin = "user170";
+    final private String driverPassword = "UserUser123";
 
     public static WebDriver getDriver(String browserType){
 
@@ -35,18 +35,12 @@ public class WebDriverFactory_VyTrack {
 
     }
 
-    public void setDriverLogin(String driverLogin){
-        this.driverLogin = driverLogin;
-    }
-
+    //getter for driver login username:
     public String getDriverLogin(){
         return driverLogin;
     }
 
-    public void setDriverPassword(String driverPassword){
-        this.driverPassword = driverPassword;
-    }
-
+    //getter for driver login password:
     public String getDriverPassword(){
         return driverPassword;
     }
