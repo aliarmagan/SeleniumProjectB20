@@ -55,4 +55,23 @@ public class WebDriverFactory_VyTrack {
 
     }
 
+    public void setDriver(){
+        driver = WebDriverFactory_VyTrack.getDriver("chrome");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+        //Go to QA environment VyTrack:
+        driver.get("https://qa2.vytrack.com");
+
+    }
+
+    public void driverTearDown() {
+        //Halting execution of code to see page results:
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+        //Closing driver after every test:
+        driver.close();
+
+    }
+
 }

@@ -10,17 +10,11 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class VyTrack_TestNG extends WebDriverFactory_VyTrack {
+public class VyTrack_TestNG_Login_FleetOdometer extends WebDriverFactory_VyTrack {
 
     @BeforeMethod
     public void setDriver(){
-        driver = WebDriverFactory_VyTrack.getDriver("chrome");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
-        //Go to QA environment VyTrack:
-        driver.get("https://qa2.vytrack.com");
-
+        super.setDriver();
     }
 
     @Test
@@ -78,12 +72,7 @@ public class VyTrack_TestNG extends WebDriverFactory_VyTrack {
 
     @AfterMethod
     public void driverTearDown() {
-        //Halting execution of code to see page results:
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-
-        //Closing driver after every test:
-        driver.close();
-
+        super.driverTearDown();
     }
 
 }
