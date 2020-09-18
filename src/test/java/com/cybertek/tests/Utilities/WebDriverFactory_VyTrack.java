@@ -45,6 +45,7 @@ public class WebDriverFactory_VyTrack {
         return driverPassword;
     }
 
+    //Take screenshot and set name for ease of re-usability:
     public void getScreenShot(String screenShotName) throws IOException {
 
         //Calling getScreenShotAs method to create new img file:
