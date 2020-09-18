@@ -85,6 +85,9 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         //Save and close:
         driver.findElement(By.xpath("//div/button[@class='btn btn-success action-button']")).click();
 
+        //Take ScreenShot:
+        getScreenShot("Created Odometer Screenshot");
+
 
 
     }
