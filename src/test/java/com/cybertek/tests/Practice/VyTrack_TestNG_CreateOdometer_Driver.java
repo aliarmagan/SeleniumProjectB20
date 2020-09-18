@@ -42,7 +42,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         String actualHomePageTitle = driver.getTitle();
 
         //ScreenShot method in Utility/WebDriverFactory
-        getScreenShot(driver, "Driver Login landing page");
+        getScreenShot("Driver Login landing page");
 
         //verify driver has landed on vytrack Dashboard:
         Assert.assertEquals(actualHomePageTitle, expectedHomePageTitle, "Login failed");
@@ -60,7 +60,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         String actualVehicleOdometerTitle = driver.getTitle();
 
         //ScreenShot method in Utility/WebDriverFactory
-        getScreenShot(driver, "Fleet Vehicles Odometer Overview");
+        getScreenShot("Fleet Vehicles Odometer Overview");
 
         //verifying driver navigation successful:
         Assert.assertEquals(actualVehicleOdometerTitle, expectedVehicleOdometerTitle, "Navigation to vehicle odometer Failed!");
