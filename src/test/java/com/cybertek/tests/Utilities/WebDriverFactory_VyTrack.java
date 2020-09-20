@@ -46,13 +46,24 @@ public class WebDriverFactory_VyTrack {
     }
 
     //Take screenshot and set name for ease of re-usability:
-    public void getScreenShot(String screenShotName) throws IOException {
+    public void getScreenShotMac(String screenShotName) throws IOException {
 
         //Calling getScreenShotAs method to create new img file:
         File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
         //copying file to new location:
         FileUtils.copyFile(srcFile, new File("/Users/mohammadafzal/Desktop/Zain School/" + screenShotName));
+
+    }
+
+    //Take screenshot and set name for ease of re-usability:
+    public void getScreenShotWindows(String screenShotName) throws IOException {
+
+        //Calling getScreenShotAs method to create new img file:
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        //copying file to new location:
+        FileUtils.copyFile(srcFile, new File("C:\\Users\\Zain\\Desktop\\B20 Automation Class\\Selenium Assignments\\Screenshots\\" + screenShotName));
 
     }
 

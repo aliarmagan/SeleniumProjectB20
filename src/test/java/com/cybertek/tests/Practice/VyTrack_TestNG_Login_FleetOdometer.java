@@ -1,14 +1,14 @@
 package com.cybertek.tests.Practice;
 
 import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class VyTrack_TestNG_Login_FleetOdometer extends WebDriverFactory_VyTrack {
 
@@ -37,7 +37,7 @@ public class VyTrack_TestNG_Login_FleetOdometer extends WebDriverFactory_VyTrack
         String actualHomePageTitle = driver.getTitle();
 
         //ScreenShot method in Utility/WebDriverFactory
-        getScreenShot("Driver Login landing page");
+        getScreenShotMac("Driver Login landing page");
 
         //verify driver has landed on vytrack Dashboard:
         Assert.assertEquals(actualHomePageTitle, expectedHomePageTitle, "Login failed");
@@ -62,7 +62,7 @@ public class VyTrack_TestNG_Login_FleetOdometer extends WebDriverFactory_VyTrack
         String actualVehicleOdometerTitle = driver.getTitle();
 
         //ScreenShot method in Utility/WebDriverFactory
-        getScreenShot( "Fleet Vehicles Odometer Overview");
+        getScreenShotMac( "Fleet Vehicles Odometer Overview");
 
         //verifying driver navigation successful:
         Assert.assertEquals(actualVehicleOdometerTitle, expectedVehicleOdometerTitle, "Navigation to vehicle odometer Failed!");
