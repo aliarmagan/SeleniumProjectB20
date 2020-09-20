@@ -91,4 +91,16 @@ public class WebDriverFactory_VyTrack {
         return OS;
     }
 
+    public void getOSAndScreenShot(String screenShotName) throws IOException {
+
+        if (getOS().toLowerCase().contains("windows")){
+            getScreenShotWindows(screenShotName);
+        }
+
+        if (getOS().toLowerCase().contains("mac")){
+            getScreenShotMac(screenShotName);
+        }
+
+    }
+
 }
