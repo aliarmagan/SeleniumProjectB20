@@ -1,6 +1,6 @@
 package com.cybertek.tests.day5_TestNG_intro_dropdowns;
 
-import com.cybertek.tests.Utilities.WebDriverFactory_VyTrack;
+import com.cybertek.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
