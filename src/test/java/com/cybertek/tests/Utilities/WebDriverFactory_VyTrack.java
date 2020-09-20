@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverFactory_VyTrack {
 
     public WebDriver driver;
+    private String OS = System.getProperty("os.name");
     final private String driverLogin = "user170";
     final private String driverPassword = "UserUser123";
 
@@ -84,6 +85,10 @@ public class WebDriverFactory_VyTrack {
         //Closing driver after every test:
         driver.close();
 
+    }
+
+    public String getOS(){
+        return OS;
     }
 
 }
