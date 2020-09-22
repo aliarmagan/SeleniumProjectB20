@@ -1,7 +1,7 @@
 package com.cybertek.tests.day6_Dropdown_Review_javaFaker;
 
 import com.cybertek.Utilities.SmartBearUtilities;
-import com.cybertek.Utilities.WebDriverFactory_VyTrack;
+import com.cybertek.Utilities.WebDriverFactory;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -21,7 +21,7 @@ public class SmartBearTests {
 
     @BeforeMethod
     public void setupMethod(){
-        driver = WebDriverFactory_VyTrack.getDriver("chrome");
+        driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
