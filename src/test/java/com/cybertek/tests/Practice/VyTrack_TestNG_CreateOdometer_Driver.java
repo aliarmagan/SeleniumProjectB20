@@ -37,7 +37,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         String actualHomePageTitle = driver.getTitle();
 
         //ScreenShot method in Utility/WebDriverFactory
-        getScreenShotMac("Driver Login landing page");
+        getOSAndScreenShot("Driver login successful");
 
         //verify driver has landed on vytrack Dashboard:
         Assert.assertEquals(actualHomePageTitle, expectedHomePageTitle, "Login failed");
@@ -55,7 +55,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         String actualVehicleOdometerTitle = driver.getTitle();
 
         //ScreenShot method in Utility/WebDriverFactory
-        getScreenShotMac("Fleet Vehicles Odometer Overview");
+        getOSAndScreenShot("Driver Odometer");
 
         //verifying driver navigation successful:
         Assert.assertEquals(actualVehicleOdometerTitle, expectedVehicleOdometerTitle, "Navigation to vehicle odometer Failed!");
@@ -74,7 +74,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         //Enter Driver:
         driver.findElement(By.name("custom_entity_type[Driver]")).sendKeys("Zain");
 
-        //Enter Model: (MODEL NOT SELECTABLE):
+        //Enter Model: (MODEL NOT SELECTABLE, BUG):
 
 
         //Save and close:
@@ -84,8 +84,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         Thread.sleep(2000);
 
         //Take ScreenShot:
-        getScreenShotMac("Created Odometer Screenshot");
-
+        getOSAndScreenShot("Odometer created!");
 
 
     }
