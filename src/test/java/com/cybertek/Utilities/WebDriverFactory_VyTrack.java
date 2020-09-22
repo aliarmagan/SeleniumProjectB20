@@ -46,7 +46,7 @@ public class WebDriverFactory_VyTrack {
         return driverPassword;
     }
 
-    //Take screenshot and set name for ease of re-usability:
+    //Take screenshot and set name for ease of re-usability: (PERSONALIZED PATH!!!)
     public void getScreenShotMac(String screenShotName) throws IOException {
 
         //Calling getScreenShotAs method to create new img file:
@@ -57,7 +57,7 @@ public class WebDriverFactory_VyTrack {
 
     }
 
-    //Take screenshot and set name for ease of re-usability:
+    //Take screenshot and set name for ease of re-usability: (PERSONALIZED PATH!!!)
     public void getScreenShotWindows(String screenShotName) throws IOException {
 
         //Calling getScreenShotAs method to create new img file:
@@ -65,6 +65,21 @@ public class WebDriverFactory_VyTrack {
 
         //copying file to new location:
         FileUtils.copyFile(srcFile, new File("C:\\Users\\Zain\\Desktop\\B20 Automation Class\\Selenium Assignments\\Screenshots\\" + screenShotName));
+
+    }
+
+    //Take screenshot and set path according to Operating system:
+    // REPO VIEWERS MUST READ BELOW!!!
+    //(PERSONALIZED PATH!!! must change path in getScreenShotMac and getScreenShotWindows to avoid any unwanted folders created!)
+    public void getOSAndScreenShot(String screenShotName) throws IOException {
+
+        if (getOS().toLowerCase().contains("windows")){
+            getScreenShotWindows(screenShotName);
+        }
+
+        if (getOS().toLowerCase().contains("mac")){
+            getScreenShotMac(screenShotName);
+        }
 
     }
 
@@ -91,16 +106,6 @@ public class WebDriverFactory_VyTrack {
         return OS;
     }
 
-    public void getOSAndScreenShot(String screenShotName) throws IOException {
 
-        if (getOS().toLowerCase().contains("windows")){
-            getScreenShotWindows(screenShotName);
-        }
-
-        if (getOS().toLowerCase().contains("mac")){
-           getScreenShotMac(screenShotName);
-        }
-
-    }
 
 }
