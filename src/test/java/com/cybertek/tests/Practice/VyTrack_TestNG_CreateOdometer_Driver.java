@@ -74,7 +74,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         //Enter Driver:
         driver.findElement(By.name("custom_entity_type[Driver]")).sendKeys("Zain");
 
-        //Enter Model: (MODEL NOT SELECTABLE):
+        //Enter Model: (MODEL NOT SELECTABLE, BUG):
 
 
         //Save and close:
