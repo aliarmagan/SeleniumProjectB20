@@ -1,5 +1,6 @@
 package com.cybertek.tests.day6_Dropdown_Review_javaFaker;
 
+import com.cybertek.Utilities.WebDriverFactory;
 import com.cybertek.Utilities.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,7 @@ public class DropdownTasks {
 
     @BeforeMethod
     public void setupMethod(){
-        driver = WebDriverFactory_VyTrack.getDriver("chrome");
+        driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("https://practice.cybertekschool.com/dropdown");
