@@ -24,7 +24,6 @@ public class SmartBearTests {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
         SmartBearUtilities.loginToSmartBear(driver);
     }
 
