@@ -95,8 +95,15 @@ public class SmartBearTests {
         WebElement process = driver.findElement(By.id("ctl00_MainContent_fmwOrder_InsertButton"));
         process.click();
 
+        //Thread sleep cause implicit wait doesnt wanna work:
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e){
+            System.out.println(e);
+        }
+
         //13.Verify success message "New order has been successfully added." is displayed
-        WebElement successMessage = driver.findElement(By.tagName("strong"));
+        WebElement successMessage = driver.findElement(By.xpath("//div/strong[.='New order has been successfully added.']"));
         Assert.assertEquals(successMessage, "New order has been successfully added.", "Success message not displayed");
 
     }
