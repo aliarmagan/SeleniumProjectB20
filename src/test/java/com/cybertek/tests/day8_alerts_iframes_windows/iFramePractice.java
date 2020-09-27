@@ -48,7 +48,7 @@ public class iFramePractice {
         //Assert that text is displaying on page:
         Assert.assertTrue(yourContentGoesHereText.isDisplayed(), "Text is not displayed, verification failed!");
 
-        // 5.Assert: “An iFrame containing the TinyMCEWYSIWYG Editor:
+        // 5.Assert: “An iFrame containing the TinyMCEWYSIWYG Editor is displayed:
         //driver.switchTo().parentFrame();
         driver.switchTo().defaultContent();
         WebElement parentText = driver.findElement(By.xpath("//h3"));
