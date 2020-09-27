@@ -39,7 +39,7 @@ public class BrowserUtils {
         try {
             Thread.sleep(sec * 1000);
         } catch (InterruptedException e){
-            System.out.println(e);
+            System.out.println("Interrupted exception Handled");
         }
     }
 
