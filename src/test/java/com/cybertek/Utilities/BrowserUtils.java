@@ -16,14 +16,33 @@ public class BrowserUtils {
 
     public static List<String> getElementText(List<WebElement> list){
 
-        List<String> elementText = new ArrayList<>();
+        List<String> elementTextOptions = new ArrayList<>();
 
         for (WebElement eachElement : list) {
-               elementText.add(eachElement.getText());
+               elementTextOptions.add(eachElement.getText());
         }
 
-        return elementText;
+        return elementTextOptions;
 
     }
+
+    /**
+    Create a utility method name: wait
+    static method
+    @param sec
+    @return void
+     Integer num i pass should be accepted as seconds
+     Handle checked exception with try-catch
+     */
+
+    public static void wait(int sec){
+        try {
+            Thread.sleep(sec * 1000);
+        } catch (InterruptedException e){
+            System.out.println(e);
+        }
+    }
+
+
 
 }
