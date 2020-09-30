@@ -10,10 +10,6 @@ import org.testng.annotations.Test;
 
 public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTrack {
 
-    @BeforeMethod
-    public void setDriver(){
-        super.setDriver();
-    }
 
     @Test
     public void driverCreateOdometer() throws Exception {
@@ -29,7 +25,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         //Login:
         //driver.findElement(By.name("_submit")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         //verify driver has landed on vytrack Dashboard and take screenshot:
         //confirm login successful,
@@ -48,7 +44,7 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         //Find and click on vehicle odometer:
         driver.findElement(By.xpath("//span[.='Vehicle Odometer']")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         //Verify driver has navigated to the vehicle odometer page overview and take screenshot:
         String expectedVehicleOdometerTitle = "Vehicle Odometer - Entities - System - Car - Entities - System";
@@ -81,17 +77,12 @@ public class VyTrack_TestNG_CreateOdometer_Driver extends WebDriverFactory_VyTra
         driver.findElement(By.xpath("//div/button[@class='btn btn-success action-button']")).click();
 
         //Wait for page to fully load:
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         //Take ScreenShot:
         getOSAndScreenShot("Odometer created!");
 
 
     }
-
-    @AfterMethod
-    public void driverTearDown(){
-        super.driverTearDown();
-    }
-
 }
+

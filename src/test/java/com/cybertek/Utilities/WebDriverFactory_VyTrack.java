@@ -7,6 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.io.IOException;
@@ -83,6 +85,7 @@ public class WebDriverFactory_VyTrack {
 
     }
 
+    @BeforeMethod
     public void setDriver(){
         driver = WebDriverFactory_VyTrack.getDriver("chrome");
         driver.manage().window().maximize();
@@ -93,6 +96,7 @@ public class WebDriverFactory_VyTrack {
 
     }
 
+    @AfterMethod
     public void driverTearDown() {
         //Halting execution of code to see page results:
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
