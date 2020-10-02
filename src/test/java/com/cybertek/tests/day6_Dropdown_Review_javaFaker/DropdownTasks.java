@@ -1,7 +1,6 @@
 package com.cybertek.tests.day6_Dropdown_Review_javaFaker;
 
-import com.cybertek.Utilities.WebDriverFactory;
-import com.cybertek.Utilities.WebDriverFactory_VyTrack;
+import com.cybertek.Utilities.BrowserUtility.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

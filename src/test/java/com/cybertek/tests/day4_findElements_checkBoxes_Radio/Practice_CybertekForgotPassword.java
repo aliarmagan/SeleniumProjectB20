@@ -1,6 +1,6 @@
 package com.cybertek.tests.day4_findElements_checkBoxes_Radio;
 
-import com.cybertek.Utilities.WebDriverFactory_VyTrack;
+import com.cybertek.Utilities.VyTrack.WebDriverFactory_VyTrack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,7 +1,7 @@
 package com.cybertek.tests.day7_webTables;
 
-import com.cybertek.Utilities.SmartBearUtilities;
-import com.cybertek.Utilities.WebDriverFactory;
+import com.cybertek.Utilities.BrowserUtility.SmartBearUtilities;
+import com.cybertek.Utilities.BrowserUtility.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

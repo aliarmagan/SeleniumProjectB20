@@ -1,7 +1,7 @@
 package com.cybertek.tests.day8_alerts_iframes_windows;
 
-import com.cybertek.Utilities.BrowserUtils;
-import com.cybertek.Utilities.WebDriverFactory;
+import com.cybertek.Utilities.BrowserUtility.BrowserUtils;
+import com.cybertek.Utilities.BrowserUtility.WebDriverFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

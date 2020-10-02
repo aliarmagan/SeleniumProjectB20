@@ -1,4 +1,4 @@
-package com.cybertek.Utilities;
+package com.cybertek.Utilities.BrowserUtility;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,7 +1,7 @@
 package com.cybertek.tests.day8_alerts_iframes_windows;
 
-import com.cybertek.Utilities.SmartBearUtilities;
-import com.cybertek.Utilities.WebDriverFactory;
+import com.cybertek.Utilities.BrowserUtility.SmartBearUtilities;
+import com.cybertek.Utilities.BrowserUtility.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

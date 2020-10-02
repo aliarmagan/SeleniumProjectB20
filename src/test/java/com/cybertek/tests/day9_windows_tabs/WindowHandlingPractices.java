@@ -1,13 +1,12 @@
 package com.cybertek.tests.day9_windows_tabs;
 
-import com.cybertek.Utilities.BrowserUtils;
-import com.cybertek.Utilities.WebDriverFactory;
+import com.cybertek.Utilities.BrowserUtility.BrowserUtils;
+import com.cybertek.Utilities.BrowserUtility.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
