@@ -70,6 +70,7 @@ public class SmartBearPractices_9_10_11 extends TestBase {
             Assert.assertFalse(each.getText().equals("Mark Smith"));
         }
 
+        file.close();
 
     }
 
