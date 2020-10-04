@@ -16,6 +16,7 @@ public class Driver {
         if (driver == null) {
 
                 String browser = ConfigurationReader.getProperty("browser");
+
                 switch (browser){
                     case "chrome":
                         WebDriverManager.chromedriver().setup();
@@ -34,6 +35,13 @@ public class Driver {
                 }
         }
         return driver;
+    }
+
+    public static void closeDriver(){
+        if (driver != null){
+            driver.quit();
+            driver = null;
+        }
     }
 
 }
