@@ -3,16 +3,16 @@ package com.cybertek.tests.day10_testBase_DriverUtil;
 import com.cybertek.Utilities.BrowserUtility.SmartBearUtilities;
 import com.cybertek.tests.base.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 public class SmartBearPractices_9_10_11 extends TestBase {
-
-    WebDriver driver;
 
    /* @BeforeMethod
     public void setupMethod(){
@@ -25,7 +25,23 @@ public class SmartBearPractices_9_10_11 extends TestBase {
     }*/
 
     @Test
-    public void p9_delete_order_task(){
+    public void p9_delete_order_task() throws IOException {
+        //Creating properties object to be able to read properties file
+        Properties properties = new Properties();
+
+        //Opening the file in JVM memory using FileInputStream
+        FileInputStream file = new FileInputStream("configuration.properties");
+
+        //loading the file into properties object
+        properties.load(file);
+
+        // -> Getting Url from configurations file and
+        String url = properties.getProperty("smartBearUrl");
+
+        //getting the url
+        driver.get(url);
+
+        //logging in to smartBear using smartBearUtilities class:
         SmartBearUtilities.loginToSmartBear(driver);
 
         //Locate the checkbox for mark smith and click on it
