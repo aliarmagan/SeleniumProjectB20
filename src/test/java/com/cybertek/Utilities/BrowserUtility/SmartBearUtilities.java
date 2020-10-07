@@ -26,7 +26,7 @@ public class SmartBearUtilities {
         loginButton.click();
 
     }
-          /*
+          /**
     @Param: Method takes WebDriver object and String(name).
     • Method should verify if given name exists in orders.
     • This method should simply accepts a name(String), and assert whether
