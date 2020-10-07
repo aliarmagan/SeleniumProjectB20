@@ -23,7 +23,7 @@ public class DriverUtilsPractice {
         searchBox.sendKeys("wooden spoon" + Keys.ENTER);
 
         //expected
-        String expectedInTitle = search;
+        String expectedInTitle = search ;
         String actualTitle = Driver.getDriver().getTitle();
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
