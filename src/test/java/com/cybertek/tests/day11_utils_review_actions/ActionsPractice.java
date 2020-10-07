@@ -37,11 +37,21 @@ public class ActionsPractice {
         Assert.assertTrue(user1.isDisplayed(), "Image 1 is not displayed! Verification failed!!!");
 
         //4. Hover over to second image
+        BrowserUtils.wait(2);
+        actions.moveToElement(img2).perform();
+
         //5. Assert:
         //a. "name: user2" is displayed
+        Assert.assertTrue(user2.isDisplayed(), "Image 2 is not displayed! Verification failed!!!");
+
         //6. Hover over to third image
+        BrowserUtils.wait(2);
+        actions.moveToElement(img3).perform();
+
         //7. Confirm:
         //a. "name: user3" is displayed
+        Assert.assertTrue(user3.isDisplayed(), "Image 3 is not displayed! Verification failed!!!");
+
 
     }
 
