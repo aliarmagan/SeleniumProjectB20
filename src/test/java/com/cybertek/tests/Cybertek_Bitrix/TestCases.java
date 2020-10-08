@@ -5,12 +5,8 @@ import com.cybertek.Utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.security.Key;
-import java.util.Properties;
 
 public class TestCases {
 
@@ -53,7 +49,7 @@ public class TestCases {
         Assert.assertTrue(textEditor.isDisplayed(), "Text-editor is not displayed!");
 
         //closing the driver:
-       // Driver.getDriver().close();
+        Driver.getDriver().close();
 
 
 
