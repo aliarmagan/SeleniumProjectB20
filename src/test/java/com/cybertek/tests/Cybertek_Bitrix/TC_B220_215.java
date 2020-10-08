@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCases {
+public class TC_B220_215 {
 
     //B220-176 AC# 2
     //TC B220-215
