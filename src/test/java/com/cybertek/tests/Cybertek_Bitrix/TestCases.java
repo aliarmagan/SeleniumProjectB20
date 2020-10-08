@@ -17,8 +17,8 @@ public class TestCases {
     public void TC_B220_215(){
         //getting properties from config file:
         String url = ConfigurationReader.getProperty("bitrixUrl");
-        String username = ConfigurationReader.getProperty("username");
-        String password = ConfigurationReader.getProperty("password");
+        String username = ConfigurationReader.getProperty("bitrixUsername");
+        String password = ConfigurationReader.getProperty("bitrixPassword");
 
         //going to url and logging in:
         Driver.getDriver().get(url);
