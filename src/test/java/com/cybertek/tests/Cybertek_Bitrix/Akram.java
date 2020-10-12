@@ -66,6 +66,7 @@ public class Akram {
 
     @AfterMethod
     public void teardown(){
+        BrowserUtils.wait(1);
         Driver.closeDriver();
     }
 
