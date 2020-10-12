@@ -60,6 +60,8 @@ public class Akram {
         WebElement send = Driver.getDriver().findElement(By.id("blog-submit-button-save"));
         send.click();
 
+        //wait to see if driver clicks send button:
+        BrowserUtils.wait(2);
     }
 
     @AfterMethod
