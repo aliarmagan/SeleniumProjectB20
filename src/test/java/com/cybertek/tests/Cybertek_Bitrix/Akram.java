@@ -6,6 +6,7 @@ import com.cybertek.Utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -39,29 +40,30 @@ public class Akram {
         BrowserUtils.wait(2);
 
         //get task text bar:
-        WebElement taskTextBar = Driver.getDriver().findElement(By.name("ACTION[0][ARGUMENTS][data][TITLE]"));
+        WebElement taskTextBar = Driver.getDriver().findElement(By.xpath("(//div/input)[58]"));
 
         //send keys to task bar:
         taskTextBar.sendKeys("Hello");
 
-        //locating iframe under task text bar:
-        WebElement textFrame = Driver.getDriver().findElement(By.xpath("(//div/iframe[@class = 'bx-editor-iframe'])[1]"));
-
         //switching from default content to iframe:
-        Driver.getDriver().switchTo().frame(textFrame);
+        Driver.getDriver().switchTo().frame(1);
 
         //locating text bar and sending keys:
         WebElement iframeText = Driver.getDriver().findElement(By.xpath("//html/body"));
-        iframeText.click();
-        iframeText.sendKeys("hello");
 
+        iframeText.sendKeys("hello");
 
         //switching to driver to default content:
         Driver.getDriver().switchTo().parentFrame();
 
         //locating and clicking send button:
-        WebElement send = Driver.getDriver().findElement(By.id("xblog-submit-button-save"));
+        WebElement send = Driver.getDriver().findElement(By.id("blog-submit-button-save"));
 
+    }
+
+    @AfterMethod
+    public void teardown(){
+        Driver.closeDriver();
     }
 
 }
