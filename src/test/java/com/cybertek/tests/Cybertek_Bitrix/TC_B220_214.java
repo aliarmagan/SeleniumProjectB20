@@ -8,13 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_B220_215 {
+public class TC_B220_214 {
 
     //B220-176 AC# 2
     //TC B220-215
 
     @Test
-    public void TC_B220_215(){
+    public void TC_B220_214(){
         //getting properties from config file:
         String url = ConfigurationReader.getProperty("bitrixUrl");
         String username = ConfigurationReader.getProperty("bitrixUsername");
