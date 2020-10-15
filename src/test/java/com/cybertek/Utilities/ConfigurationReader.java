@@ -13,8 +13,8 @@ public class ConfigurationReader {
     //Without static block we cannot type code outside a method!
 
     static {
-        //to handle the exception FileInputStream is throwing, we are surrounding it with try-catch
 
+        //to handle the exception FileInputStream is throwing, we are surrounding it with try-catch
         try {
             //#2- We get the path and pass it into FileInput Stream, to open the file
             FileInputStream file = new FileInputStream("configuration.properties");
