@@ -30,17 +30,23 @@ public class TC_B220_215 {
 
         BrowserUtils.wait(1);
 
-        //locating text bar for url input:
-        WebElement videoUploadText = Driver.getDriver().findElement(By.xpath("//span[@title = 'Insert video']"));
+        //locating video input button:
+        WebElement videoUploadButton = Driver.getDriver().findElement(By.xpath("//span[@class = 'bxhtmled-top-bar-btn bxhtmled-button-video']"));
+
+        //clicking on video button:
+        videoUploadButton.click();
+
+        //locating input for text:
+        WebElement textInput = Driver.getDriver().findElement(By.id("video_idPostFormLHE_blogPostForm-source"));
 
         //sending keys:
-        videoUploadText.sendKeys("https://www.youtube.com/watch?v=eV-GmJ5GvPc");
+        textInput.sendKeys("https://www.youtube.com/watch?v=gGaOMT677TM");
 
-        //locating submit button:
-        WebElement uploadButton =Driver.getDriver().findElement(By.id("undefined"));
-        uploadButton.click();
+        //finding submit button:
+        WebElement submitButton = Driver.getDriver().findElement(By.className("adm-btn-save"));
 
-        //TODO: Fix locator for locating video upload button!
+        //clicking on submit button:
+        submitButton.click();
 
 
     }
