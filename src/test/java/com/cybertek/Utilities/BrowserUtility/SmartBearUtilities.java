@@ -11,7 +11,7 @@ public class SmartBearUtilities {
 
     public static void loginToSmartBear(WebDriver driver) {
         //Go to smart bear login page:
-        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
+        //driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
 
         //Find user name
         WebElement usernameInput = driver.findElement(By.id("ctl00_MainContent_username"));
@@ -26,7 +26,7 @@ public class SmartBearUtilities {
         loginButton.click();
 
     }
-          /*
+          /**
     @Param: Method takes WebDriver object and String(name).
     • Method should verify if given name exists in orders.
     • This method should simply accepts a name(String), and assert whether
